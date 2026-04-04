@@ -41,13 +41,12 @@ export default function Contact() {
             <h2 className="mt-0 text-4xl flex font-semibold w-full border-b bg-green-600 text-white rounded shadow p-4">
                 Contact <Phone className="ml-2" size={'3%'} />
             </h2>
-            {/* Mise en place des textes a coter du formulaire de contact pour un meilleur rendu et une meilleure expérience utilisateur et une image de font d'apres le logo qui est transparent bien-sur */}
             <div className="flex flex-col md:flex-row items-center justify-center mt-10">
                 <div className="w-full md:w-1/2 p-4 shadow rounded bg-white">
                     <h3 className="text-2xl font-semibold mb-4">Nous contacter</h3>
                     <p className="mb-4">Vous avez des questions ou besoin d'assistance ? N'hésitez pas à nous contacter. Notre équipe est là pour vous aider.</p>
-                    <p className="mb-4">Email : contact@votreentreprise.com</p>
-                    <p className="mb-4">Téléphone : +261 34 24 254 02</p>
+                    <p className="mb-4">Email : contact@tisane.com</p>
+                    <p className="mb-4">Téléphone : </p>
                 </div>
                 <div className=" flex w-full p-4">
                     <form className="w-full max-w-lg mx-auto bg-white rounded shadow p-6" onSubmit={handleSubmit}>
