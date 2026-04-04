@@ -106,7 +106,7 @@ Route::inertia('/about', 'public/About/index', [])->name('about');
 
 // ======================= Contact =========================
 Route::post('/contact', [ContactController::class, 'addContact'])->name('contact');
-Route::post('/contact/{id}/answer', [ContactController::class, 'answerContact'])->name('contact.answer');
+Route::post('/contact/{id}/answer', [ContactController::class, 'answerContact'])->name('contact.answers');
 
 Route::post('/panier/{id}/annuler', [CommandeController::class, 'annulePanier'])->name('annule.panier');
 
