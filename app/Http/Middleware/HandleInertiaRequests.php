@@ -7,6 +7,7 @@ use App\Models\Commande;
 use App\Models\Contact;
 use App\Models\Panier;
 use App\Models\Produit;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Contracts\Session\Session as ContractsSession;
 use Illuminate\Http\Request;
@@ -68,6 +69,7 @@ class HandleInertiaRequests extends Middleware
             'pannier' => Panier::where('user_id', $request->userAgent('user_agent'))->where('status', 'panier')->get(),
             'commande' => Commande::where('status', 'pending')->with('produit')->get(),
             'url' => config('app.url'),
+            'role' => Role::get(),
             'commande_take' => Commande::where('user_id', $request->userAgent('user_agent'))->with('produit')->orderBy('updated_at', 'desc')->get(),
             'users' => User::with('role')->get(),
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',

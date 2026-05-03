@@ -1,15 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Link, router, usePage } from '@inertiajs/react';
 import { cn } from '@/lib/utils';
-import { LayoutGrid, Leaf, Droplets, Info, ShoppingCart, Phone, Menu as MenuIcon, X as CloseIcon, LogIn, UserPlus, MapPinHouse, ShoppingBag, Send, MailQuestion, LucideBox } from 'lucide-react';
+import { LayoutGrid, Leaf, Droplets, Info, ShoppingCart, Phone, Menu as MenuIcon, X as CloseIcon, LogIn, UserPlus, MapPinHouse, ShoppingBag, Send, MailQuestion, LucideBox, UserCog2 } from 'lucide-react';
 import { login, register, dashboard } from '@/routes';
 import AppLogoIcon from './app-logo-icon';
 
 export function PublicTopbar() {
 
-    const { pannier, commande } = usePage().props as any;
+    const { pannier, commande, role } = usePage().props as any;
 
     const publicNavItems = [
+        {
+            title: '',
+            href: role.length >= 1 ? '/api/add/admin/' : null,
+            icon: role.length >= 1 ? UserCog2 : null,
+        },
         {
             title: '',
             href: '/produits',
