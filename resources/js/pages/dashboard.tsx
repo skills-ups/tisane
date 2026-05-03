@@ -20,7 +20,7 @@ export default function Dashboard() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Dashboard" />
             <div className="flex flex-col gap-6 p-6">
-                {/* le dashboard doit afficher les statistiques de l'application, comme le nombre d'utilisateurs, le nombre de commandes pour l'admin et le nombre de tisanes ou miel commander pour les clients avec admin a le role_id = 1 et users a le role_id = 2 */}
+
                 <Card>
                     <CardHeader>
                         <CardTitle>Statistiques</CardTitle>

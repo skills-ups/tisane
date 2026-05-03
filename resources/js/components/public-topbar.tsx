@@ -126,9 +126,6 @@ export function PublicTopbar() {
                     {/* Overlay noir semi-transparent et blur sur tout le body, désactive le scroll */}
                     <div className="absolute inset-0 bg-black/40 backdrop-blur-[6px] transition-opacity " onClick={() => setMobileOpen(false)} style={{ WebkitBackdropFilter: 'blur(6px)' }} />
                     <nav className="relative ml-auto my-auto w-[90vw] max-w-xs h-[90vh] bg-white shadow-2xl rounded-3xl p-8 flex flex-col items-center gap-6 animate-slide-in border-l border-amber-100 overflow-y-auto">
-                        <h1 className='flex text-xl font-semibold underline text-white bg-green-500 p-2 w-70 text-center rounded fixed top-0'>
-                            Menu
-                        </h1>
                         <button
                             className="self-end mb-4 p-2 rounded-full hover:bg-amber-50 focus:outline-none"
                             aria-label="Fermer le menu"
